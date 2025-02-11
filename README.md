@@ -7,9 +7,6 @@ This repository is my implementation of a Redis-like server from scratch, inspir
 - **TCP Server & Request-Response Protocol**  
   Basic socket programming for handling multiple client connections, plus a custom request/response format.
 
-- **Concurrent I/O**  
-  Uses \`epoll\` on Linux and \`kqueue\` on macOS to handle multiple connections efficiently (non-blocking mode). This reduces overhead compared to \`poll\` or \`select\`.
-
 - **Data Structures**
 
   - Hashtables for O(1) key lookups
@@ -18,9 +15,6 @@ This repository is my implementation of a Redis-like server from scratch, inspir
 
 - **Thread Pool**  
   Thread pool for asynchronous tasks (such as large data deallocation), improving responsiveness under heavy load.
-
-- **Memory Pool Optimization**  
-  Custom memory pool to reduce frequent \`malloc/free\` calls, lowering fragmentation and allocation overhead.
 
 - **Performance Tweaks**
   - **Receive Buffer Offset**: Minimize \`memmove\` calls by tracking data offset in the buffer.
@@ -58,8 +52,7 @@ clang++ -std=c++17 -O2 redis_server.cpp avl.cpp hashtable.cpp heap.cpp thread_po
 
 ## Reference
 
-Guide: [Build Your Own Redis with C/C++](https://build-your-own.org/redis/)
-Author: James Smith
+Guide: [Build Your Own Redis with C/C++](https://build-your-own.org/redis/)  
 Why from scratch? Quoting from the guide:
 
 > “Reading about things often just gives an illusion of knowledge. Learn deeper by doing!”

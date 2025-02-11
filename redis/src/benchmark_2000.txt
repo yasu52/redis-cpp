@@ -1,0 +1,17 @@
+Sending 22000 requests in total...
+
+Per-command performance:
+Command: del key1                       | Count:  2000 | Average time: 119041.50 ms
+Command: get key1                       | Count:  2000 | Average time: 126116.53 ms
+Command: keys                           | Count:  2000 | Average time: 134958.61 ms
+Command: pexpire key1 5000              | Count:  2000 | Average time: 110125.56 ms
+Command: pttl key1                      | Count:  2000 | Average time: 99135.92 ms
+Command: set key1 value1                | Count:  2000 | Average time: 131420.00 ms
+Command: zadd zset 1 n1                 | Count:  2000 | Average time: 86204.49 ms
+Command: zadd zset 2 n2                 | Count:  2000 | Average time: 70870.60 ms
+Command: zquery zset 1  0 10            | Count:  2000 | Average time: 34786.98 ms
+Command: zrem zset n1                   | Count:  2000 | Average time: 13933.68 ms
+Command: zscore zset n1                 | Count:  2000 | Average time: 53488.03 ms
+
+Total time for 22000 requests: 136.21 seconds
+Overall throughput: 161.51 requests/second
